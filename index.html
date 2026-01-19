@@ -1,52 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>Ahmed Ali | Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f0f0f;
-      color: white;
-      text-align: center;
-    }
-    .container {
-      padding: 80px 20px;
-    }
-    h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 18px;
-      color: #ccc;
-    }
-    .links a {
-      display: inline-block;
-      margin: 15px;
-      padding: 12px 25px;
-      border: 1px solid white;
-      color: white;
-      text-decoration: none;
-      border-radius: 25px;
-    }
-    .links a:hover {
-      background: white;
-      color: black;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmed Ali | Portfolio</title>
+<style>
+  /* عام */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f0f0f;
+    color: white;
+    text-align: center;
+    scroll-behavior: smooth;
+  }
+  a { text-decoration: none; }
+
+  /* هيدر */
+  header {
+    padding: 60px 20px;
+  }
+  header img {
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+    transition: transform 0.3s;
+  }
+  header img:hover { transform: scale(1.05); }
+  header h1 { font-size: 42px; margin: 15px 0 5px; }
+  header p { font-size: 18px; color: #ccc; }
+
+  /* زر تواصل */
+  .contact-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #ffcc00;
+    color: black;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: transform 0.2s;
+  }
+  .contact-btn:hover { transform: scale(1.05); }
+
+  /* سكشن أعمال */
+  .portfolio {
+    padding: 60px 20px;
+  }
+  .portfolio h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  .works {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  .work {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .work img, .work video {
+    width: 100%;
+    border-radius: 12px;
+  }
+  .work:hover { 
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px #ffcc00;
+  }
+
+  /* روابط السوشيال */
+  .social-links {
+    margin: 40px 0 60px;
+  }
+  .social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 25px;
+    border: 1px solid white;
+    border-radius: 25px;
+    color: white;
+    transition: 0.3s;
+  }
+  .social-links a:hover { background: white; color: black; }
+
+  /* متجاوب */
+  @media(max-width:600px){
+    header h1 { font-size: 32px; }
+    header p { font-size: 16px; }
+    .portfolio h2 { font-size: 28px; }
+  }
+</style>
 </head>
 <body>
-  <div class="container">
-    <h1>Ahmed Ali</h1>
-    <p>Graphic Designer & Video Editor</p>
 
-    <div class="links">
-      <a href="#">Instagram</a>
-      <a href="#">YouTube</a>
-      <a href="#">WhatsApp</a>
+<header>
+  <img src="https://via.placeholder.com/150" alt="Ahmed Ali">
+  <h1>Ahmed Ali</h1>
+  <p>مصمم جرافيك و مونتير فيديو</p>
+  <a href="https://wa.me/2010XXXXXXX" class="contact-btn">تواصل معي</a>
+</header>
+
+<section class="portfolio">
+  <h2>أعمالي</h2>
+  <div class="works">
+    <div class="work">
+      <img src="https://via.placeholder.com/300x200" alt="تصميم 1">
+    </div>
+    <div class="work">
+      <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
+    </div>
+    <div class="work">
+      <img src="https://via.placeholder.com/300x200" alt="تصميم 2">
+    </div>
+    <div class="work">
+      <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
     </div>
   </div>
+</section>
+
+<div class="social-links">
+  <a href="https://www.behance.net/USERNAME">Behance</a>
+  <a href="https://instagram.com/USERNAME">Instagram</a>
+</div>
+
 </body>
 </html>
+
